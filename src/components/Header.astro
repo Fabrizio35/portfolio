@@ -1,0 +1,51 @@
+---
+const navItems = [
+  { title: 'Experiencia', label: 'experiencia', url: '#experiencia' },
+  { title: 'Proyectos', label: 'proyectos', url: '#proyectos' },
+  { title: 'Sobre mí', label: 'sobre-mi', url: '#sobre-mi' },
+  {
+    title: 'Contacto',
+    label: 'contacto',
+    url: 'mailto:ossolafabrizio@gmail.com',
+  },
+]
+---
+
+<header
+  class="flex justify-center items-center pt-5 mx-auto fixed top-0 z-10 w-full"
+>
+  <nav
+    class="flex flex-row gap-x-4 text-sm px-3 rounded-full font-medium flex-wrap items-center justify-center"
+  >
+    {
+      navItems.map((item) => (
+        <a
+          href={item.url}
+          aria-label={item.label}
+          class="p-2 hover:text-yellow-500 transition duration-200 text-gray-200"
+        >
+          {item.title}
+        </a>
+      ))
+    }
+    <a
+      onclick="modal_cv.showModal()"
+      class="p-2 hover:text-yellow-500 transition duration-200 text-gray-200 cursor-pointer"
+      >Descargar CV</a
+    >
+  </nav>
+</header>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10;
+    }
+  }
+</style>

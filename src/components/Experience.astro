@@ -1,0 +1,23 @@
+---
+import ExperienceItem from './ExperienceItem.astro'
+
+const EXPERIENCIE = [
+  {
+    date: 'Diciembre 2023 - Actualmente',
+    title: 'Frontend Developer Junior',
+    company: 'Synergiart SL',
+    description:
+      'Encargado de desarrollar código Frontend en base al diseño UI/UX. Conectar con Backend para el consumo de la API. Generar pantallas y componentes 100% personalizados utilizando tecnologías como Typescript, React, Tailwind, Material UI, Zustand.',
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

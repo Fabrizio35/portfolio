@@ -1,0 +1,119 @@
+---
+import GitHubIcon from '../icons/GitHub.astro'
+import LinkIcon from '../icons/Link.astro'
+import NextjsIcon from '../icons/Nextjs.astro'
+import TypescriptIcon from '../icons/Typescript.astro'
+import TailwindIcon from '../icons/Tailwind.astro'
+import PawIcon from '../icons/Paw.astro'
+import ReduxIcon from '../icons/Redux.astro'
+
+const TECHS = {
+  NEXT: {
+    name: 'Next.js',
+    class: 'bg-black text-white',
+    icon: NextjsIcon,
+  },
+  TYPESCRIPT: {
+    name: 'Typescript',
+    class: 'bg-blue-700 text-white',
+    icon: TypescriptIcon,
+  },
+  TAILWIND: {
+    name: 'Tailwind',
+    class: 'bg-sky-600',
+    icon: TailwindIcon,
+  },
+  ZUSTAND: {
+    name: 'Zustand',
+    class: 'bg-yellow-900',
+    icon: PawIcon,
+  },
+  REDUX: {
+    name: 'Redux',
+    class: 'bg-purple-700',
+    icon: ReduxIcon,
+  },
+}
+
+const PROJECTS = [
+  {
+    title: 'User Management - Sistema de gestión de usuarios',
+    description:
+      'Sistema de gestión de usuarios. Filtros por edad y género. Ordenación alfabética. Búsqueda por nombre. Detalle del usuario. Eliminación de la lista.',
+    source: 'https://github.com/Fabrizio35/user-management',
+    link: 'https://user-management-fo.vercel.app/',
+    image: '/projects/user-management-cap.webp',
+    techs: [TECHS.TYPESCRIPT, TECHS.NEXT, TECHS.TAILWIND],
+  },
+  {
+    title: 'FO Shop - Ecommerce',
+    description:
+      'Ecommerce de productos. Filtros por categoría y precio. Ordenación alfabética. Paginado. Búsqueda por nombre. Detalle del producto. Carrito de compra.',
+    source: 'https://github.com/Fabrizio35/fo-shop',
+    link: 'https://foshop.vercel.app/',
+    image: '/projects/fo-shop-cap.webp',
+    techs: [TECHS.TYPESCRIPT, TECHS.NEXT, TECHS.TAILWIND, TECHS.ZUSTAND],
+  },
+  {
+    title: 'Add Friends - Sistema de gestión de amistades',
+    description:
+      'Sistema de gestión de solicitudes de amistades. Visualización de foto de perfil. Agregar y eliminar amigos/as. Detalle de la amistad. Editar nombre del amigo/a.',
+    source: 'https://github.com/Fabrizio35/add-friends',
+    link: 'https://add-friends.vercel.app/',
+    image: '/projects/add-friends-cap.webp',
+    techs: [TECHS.TYPESCRIPT, TECHS.NEXT, TECHS.TAILWIND, TECHS.REDUX],
+  },
+]
+---
+
+{
+  PROJECTS.map(({ image, title, description, source, link, techs }) => (
+    <article class="flex flex-col md:flex-row w-full gap-8 my-12">
+      <div class="w-full md:w-1/2">
+        <div class="h-full transition duration-500 ease-in-out shadow-xl overflow-clip rounded-xl border border-gray-800 hover:border-gray-700 hover:bg-gray-800/50">
+          <img
+            class="w-full h-full transition duration-500 hover:scale-110"
+            src={image}
+            alt={`${title} image`}
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col w-full md:w-1/2 gap-3">
+        <h3 class="text-2xl font-bold text-gray-100">{title}</h3>
+        <ul class="flex gap-2 flex-wrap">
+          {techs.map((tech) => (
+            <li
+              class={`flex gap-1 text-xs items-center rounded-full px-2 py-1 ${tech.class}`}
+            >
+              <tech.icon class="size-4" />
+              {tech.name}
+            </li>
+          ))}
+        </ul>
+        <p class="text-gray-400 text-pretty">{description}</p>
+        <footer class="flex gap-4">
+          <a
+            href={source}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 px-3 py-1 text-md text-white transition bg-gray-800 border border-gray-600 hover:border-gray-800 rounded-xl"
+          >
+            <GitHubIcon class="size-4" />
+            Código
+          </a>
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 px-3 py-1 text-md text-white transition bg-gray-800 border border-gray-600 hover:border-gray-800 rounded-xl"
+          >
+            <LinkIcon class="size-4" />
+            Enlace
+          </a>
+        </footer>
+      </div>
+    </article>
+  ))
+}

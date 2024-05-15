@@ -1,0 +1,62 @@
+---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import ModalCV from '../components/ModalCV.astro'
+import '@fontsource-variable/onest'
+
+interface Props {
+  title: string
+  description: string
+}
+
+const { title, description } = Astro.props
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <Header />
+    <ModalCV />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    color-scheme: ligth dark;
+  }
+
+  html {
+    font-family: 'Onest Variable', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #050505;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: radial-gradient(
+      ellipse 90% 90% at 50% 10%,
+      rgba(56, 56, 114, 0.3),
+      rgba(255, 255, 255, 0)
+    );
+    background-color: rgb(10 10 10 / 1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+</style>

@@ -1,0 +1,100 @@
+---
+import Badge from '../components/Badge.astro'
+import Layout from '../layouts/Layout.astro'
+import LinkedInIcon from '../icons/LinkedIn.astro'
+import SocialLink from '../components/SocialLink.astro'
+import GitHubIcon from '../icons/GitHub.astro'
+import MailIcon from '../icons/Mail.astro'
+import Experience from '../components/Experience.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+import Briefcase from '../icons/Briefcase.astro'
+import CodeIcon from '../icons/Code.astro'
+import Projects from '../components/Projects.astro'
+import UserCheckIcon from '../icons/UserCheck.astro'
+import AboutMe from '../components/AboutMe.astro'
+import FileCVIcon from '../icons/FileCV.astro'
+---
+
+<Layout
+  title="Portfolio de Fabrizio Ossola - Desarrollador y Programador Web - Frontend / Fullstack Junior"
+  description="Contrata a Fabrizio Ossola para crear tu aplicación web. Desarrollador Web especializado en crear aplicaciones únicas."
+>
+  <main class="px-5">
+    <SectionContainer class="pt-44 pb-32" id="inicio">
+      <div class="flex flex-row items-center gap-x-4 mb-4">
+        <img
+          class="rounded-full size-16 object-cover"
+          src="/foto-fabrizio.jpg"
+          alt="fabrizio ossola photo"
+        />
+        <a
+          class="flex justify-center items-center"
+          href="https://www.linkedin.com/in/fabrizio-ossola/"
+          target="_blank"
+          rel="noopener noreferrer"><Badge>Disponible para trabajar</Badge></a
+        >
+      </div>
+
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold pb-6 lg:pb-4"
+      >
+        Hola, soy Fabrizio Ossola
+      </h1>
+      <h2 class="text-xl lg:text-xl text-wrap max-w-[740px]">
+        <span>+2 años de experiencia.</span><span class="text-yellow-200/90">
+          Desarrollador y Programador Fullstack Junior</span
+        >
+        <span class="text-sky-400/90">de Salta, Argentina 🇦🇷</span>.
+        <span class="opacity-75"
+          >Especializado en crear aplicaciones web únicas</span
+        >.
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialLink href="https://www.linkedin.com/in/fabrizio-ossola/">
+          <LinkedInIcon class="size-4" />
+          LinkedIn
+        </SocialLink>
+        <SocialLink href="https://github.com/Fabrizio35">
+          <GitHubIcon class="size-4" />
+          Github
+        </SocialLink>
+        <SocialLink href="mailto:ossolafabrizio@gmail.com">
+          <MailIcon class="size-4" />
+          Contáctame
+        </SocialLink>
+        <button
+          onclick="modal_cv.showModal()"
+          class="rounded-full border border-gray-600 flex justify-center items-center text-md gap-2 py-1 px-4 text-white bg-gray-800 hover:bg-gray-900 hover:border-gray-700 hover:scale-105 transition"
+        >
+          <FileCVIcon class="size-4" />
+          Descargar CV
+        </button>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-8" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-8" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <UserCheckIcon class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </main>
+</Layout>

@@ -38,14 +38,6 @@ const navItems = [
         </a>
       ))
     }
-    <a
-      href="/Fabrizio Ossola CV.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      download="Fabrizio Ossola CV.pdf"
-      class="p-2 hover:text-yellow-500 transition duration-200 text-gray-200 cursor-pointer"
-      >Descargar CV</a
-    >
   </nav>
 
   <!-- Hamburguer Menu Icon -->
@@ -64,7 +56,7 @@ const navItems = [
   <!-- Mobile Navbar -->
   <nav
     id="mobile-menu"
-    class="sm:hidden fixed hidden flex-col gap-2 top-0 left-0 right-0 w-full bg-gray-900 text-white py-5 z-20"
+    class="sm:hidden fixed hidden flex-col gap-2 top-0 left-0 right-0 w-full backdrop-blur bg-white/50 text-white py-5 z-20"
   >
     <button id="close-menu" class="absolute top-4 right-5 focus:outline-none">
       <XCloseIcon class="size-5 text-white" />
@@ -74,20 +66,12 @@ const navItems = [
         <a
           href={item.url}
           aria-label={item.label}
-          class="mobile-link p-2 rounded-md hover:text-yellow-500 transition duration-200 text-gray-200 mx-auto"
+          class="mobile-link p-2 rounded-md hover:text-yellow-500 transition duration-200 text-gray-200 mx-auto bg-[#474747]"
         >
           {item.title}
         </a>
       ))
     }
-    <a
-      href="/Fabrizio Ossola CV.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      download="Fabrizio Ossola CV.pdf"
-      class="mobile-link p-2 hover:text-yellow-500 transition duration-200 text-gray-200 cursor-pointer mx-auto rounded-md"
-      >Descargar CV</a
-    >
   </nav>
 </header>
 
@@ -112,21 +96,9 @@ const navItems = [
   mobileLinks.forEach((link) => {
     link.addEventListener('click', closeMenu)
   })
-
-  window.addEventListener('scroll', () => {
-    if (!mobileMenu?.classList.contains('hidden')) {
-      mobileMenu?.classList.add('scrolled')
-    } else {
-      mobileMenu?.classList.remove('scrolled')
-    }
-  })
 </script>
 
 <style>
-  #mobile-menu.scrolled .mobile-link {
-    background-color: rgb(71, 71, 71);
-  }
-
   nav {
     animation: nav-shadown 1s linear both;
     animation-timeline: scroll();

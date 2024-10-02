@@ -1,39 +1,6 @@
 ---
 import GitHubIcon from '../icons/GitHub.astro'
 import LinkIcon from '../icons/Link.astro'
-import NextjsIcon from '../icons/Nextjs.astro'
-import TypescriptIcon from '../icons/Typescript.astro'
-import TailwindIcon from '../icons/Tailwind.astro'
-import PawIcon from '../icons/Paw.astro'
-import ReduxIcon from '../icons/Redux.astro'
-
-const TECHS = {
-  NEXT: {
-    name: 'Next.js',
-    class: 'bg-black text-white',
-    icon: NextjsIcon,
-  },
-  TYPESCRIPT: {
-    name: 'Typescript',
-    class: 'bg-blue-700 text-white',
-    icon: TypescriptIcon,
-  },
-  TAILWIND: {
-    name: 'Tailwind',
-    class: 'bg-sky-600',
-    icon: TailwindIcon,
-  },
-  ZUSTAND: {
-    name: 'Zustand',
-    class: 'bg-yellow-900',
-    icon: PawIcon,
-  },
-  REDUX: {
-    name: 'Redux',
-    class: 'bg-purple-700',
-    icon: ReduxIcon,
-  },
-}
 
 const PROJECTS = [
   {
@@ -43,7 +10,7 @@ const PROJECTS = [
     source: 'https://github.com/Fabrizio35/user-management',
     link: 'https://user-management-fo.vercel.app/',
     image: '/projects/user-management-cap.webp',
-    techs: [TECHS.TYPESCRIPT, TECHS.NEXT, TECHS.TAILWIND],
+    techs: 'Typescript • Next.js • Tailwind',
   },
   {
     title: 'FO Shop - Ecommerce',
@@ -52,7 +19,7 @@ const PROJECTS = [
     source: 'https://github.com/Fabrizio35/fo-shop',
     link: 'https://foshop.vercel.app/',
     image: '/projects/fo-shop-cap.webp',
-    techs: [TECHS.TYPESCRIPT, TECHS.NEXT, TECHS.TAILWIND, TECHS.ZUSTAND],
+    techs: 'Typescript • Next.js • Tailwind • Zustand',
   },
   {
     title: 'Add Friends - Sistema de gestión de amistades',
@@ -61,7 +28,7 @@ const PROJECTS = [
     source: 'https://github.com/Fabrizio35/add-friends',
     link: 'https://add-friends.vercel.app/',
     image: '/projects/add-friends-cap.webp',
-    techs: [TECHS.TYPESCRIPT, TECHS.NEXT, TECHS.TAILWIND, TECHS.REDUX],
+    techs: 'Typescript • Next.js • Tailwind • Redux',
   },
 ]
 ---
@@ -82,23 +49,14 @@ const PROJECTS = [
 
       <div class="flex flex-col w-full md:w-1/2 gap-3">
         <h3 class="text-2xl font-bold text-gray-100">{title}</h3>
-        <ul class="flex gap-2 flex-wrap">
-          {techs.map((tech) => (
-            <li
-              class={`flex gap-1 text-xs items-center rounded-full px-2 py-1 ${tech.class}`}
-            >
-              <tech.icon class="size-4" />
-              {tech.name}
-            </li>
-          ))}
-        </ul>
+        <p class="text-gray-200 font-semibold text-pretty">{techs}</p>
         <p class="text-gray-300 text-pretty">{description}</p>
         <footer class="flex gap-4">
           <a
             href={source}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center justify-center gap-2 px-3 py-1 text-md text-white transition bg-gray-800 border border-gray-600 hover:border-gray-800 rounded-xl"
+            class="flex items-center justify-center gap-2 px-3 py-1 text-md text-gray-800 transition bg-gray-100 rounded-xl hover:scale-105"
           >
             <GitHubIcon class="size-4" />
             Código
@@ -107,7 +65,7 @@ const PROJECTS = [
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center justify-center gap-2 px-3 py-1 text-md text-white transition bg-gray-800 border border-gray-600 hover:border-gray-800 rounded-xl"
+            class="flex items-center justify-center gap-2 px-3 py-1 text-md text-gray-800 transition bg-gray-100 rounded-xl hover:scale-105"
           >
             <LinkIcon class="size-4" />
             Enlace

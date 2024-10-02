@@ -13,6 +13,8 @@ import Projects from '../components/Projects.astro'
 import UserCheckIcon from '../icons/UserCheck.astro'
 import AboutMe from '../components/AboutMe.astro'
 import FileCVIcon from '../icons/FileCV.astro'
+import Book from '../icons/Book.astro'
+import Education from '../components/Education.astro'
 ---
 
 <Layout
@@ -23,7 +25,7 @@ import FileCVIcon from '../icons/FileCV.astro'
     <SectionContainer class="pt-44 pb-32" id="inicio">
       <div class="flex flex-row items-center gap-x-4 mb-4">
         <img
-          class="rounded-full size-16 object-cover"
+          class="rounded-full size-32 object-cover hover:scale-105 transition"
           src="/foto-fabrizio.jpg"
           alt="fabrizio ossola photo"
         />
@@ -31,18 +33,20 @@ import FileCVIcon from '../icons/FileCV.astro'
           class="flex justify-center items-center"
           href="https://www.linkedin.com/in/fabrizio-ossola/"
           target="_blank"
-          rel="noopener noreferrer"><Badge>Disponible para trabajar</Badge></a
+          rel="noopener noreferrer"
         >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
       </div>
 
       <h1
         class="text-white text-3xl md:text-4xl lg:text-5xl font-bold pb-6 lg:pb-4"
       >
-        Hola, soy Fabrizio Ossola
+        Hola, soy Fabrizio Ossola.
       </h1>
       <h2 class="text-xl lg:text-xl text-wrap max-w-[740px]">
         <span>+2 años de experiencia.</span><span class="text-yellow-200/90">
-          Desarrollador y Programador Fullstack Junior</span
+          Desarrollador Fullstack</span
         >
         <span class="text-sky-400/90">de Salta, Argentina 🇦🇷</span>.
         <span class="opacity-75"
@@ -63,13 +67,16 @@ import FileCVIcon from '../icons/FileCV.astro'
           <MailIcon class="size-4" />
           Contáctame
         </SocialLink>
-        <button
-          onclick="modal_cv.showModal()"
-          class="rounded-full border border-gray-600 flex justify-center items-center text-md gap-2 py-1 px-4 text-white bg-gray-800 hover:bg-gray-900 hover:border-gray-700 hover:scale-105 transition"
+        <a
+          href="/Fabrizio Ossola CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          download="Fabrizio Ossola CV.pdf"
+          class="rounded-full flex justify-center items-center text-md gap-2 py-1 px-4 text-gray-800 bg-gray-100 hover:bg-gray-50 hover:scale-105 transition"
         >
           <FileCVIcon class="size-4" />
           Descargar CV
-        </button>
+        </a>
       </nav>
     </SectionContainer>
 
@@ -87,6 +94,14 @@ import FileCVIcon from '../icons/FileCV.astro'
         Proyectos
       </h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="educacion">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Book class="size-8" />
+        Educación
+      </h2>
+      <Education />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">

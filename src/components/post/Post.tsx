@@ -78,7 +78,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
           href={post.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white text-sm sm:text-base font-extrabold hover:underline transition duration-300 ease-in-out sm:hover:scale-105"
+          className="text-white text-sm sm:text-base font-extrabold hover:underline"
         >
           Saber más
         </a>

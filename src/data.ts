@@ -2,6 +2,8 @@ import AddFriendsImage from '@/assets/projects/add-friends-cap.webp'
 import FOShopImage from '@/assets/projects/fo-shop-cap.webp'
 import UserManagementImage from '@/assets/projects/user-management-cap.webp'
 import ConstructoraMexicanaValladolidImage from '@/assets/projects/constructora-mexicana-valladolid-cap.webp'
+import HenryGameZomeImage from '@/assets/projects/henry-game-zone-cap.webp'
+import PokemonApp from '@/assets/projects/pokemon-app-cap.webp'
 import {
   BrandTypescript,
   BrandJavascript,
@@ -46,7 +48,7 @@ export const EXPERIENCIE = [
 
 export const PROJECTS = [
   {
-    id: 4,
+    id: 6,
     title: 'Constructora Mexicana Valladolid',
     description:
       'Diseñé y desarrollé desde cero el sitio web de una constructora en México, con el objetivo de transmitir solidez, profesionalismo y facilitar la navegación por sus servicios.',
@@ -56,7 +58,7 @@ export const PROJECTS = [
     date: 'Mayo 2025',
   },
   {
-    id: 3,
+    id: 5,
     title: 'User Management - Sistema de gestión de usuarios',
     description:
       'Sistema de gestión de usuarios. Filtros por edad y género. Ordenación alfabética. Búsqueda por nombre. Detalle del usuario. Eliminación de la lista.',
@@ -67,7 +69,7 @@ export const PROJECTS = [
     date: 'Octubre 2023',
   },
   {
-    id: 2,
+    id: 4,
     title: 'FO Shop - Ecommerce',
     description:
       'Ecommerce de productos. Filtros por categoría y precio. Ordenación alfabética. Paginado. Búsqueda por nombre. Detalle del producto. Carrito de compra.',
@@ -78,7 +80,7 @@ export const PROJECTS = [
     date: 'Septiembre 2023',
   },
   {
-    id: 1,
+    id: 3,
     title: 'Add Friends - Sistema de gestión de amistades',
     description:
       'Sistema de gestión de solicitudes de amistades. Visualización de foto de perfil. Agregar y eliminar amigos/as. Detalle de la amistad. Editar nombre del amigo/a.',
@@ -86,6 +88,28 @@ export const PROJECTS = [
     link: 'https://add-friends.vercel.app/',
     image: AddFriendsImage,
     techs: 'Typescript • Next.js • Tailwind • Redux',
+    date: 'Agosto 2023',
+  },
+  {
+    id: 2,
+    title: 'Henry Game Zone',
+    description:
+      'Ecommerce de videojuegos desarrollado en equipo, con funcionalidades completas tanto de frontend como backend.',
+    source: 'https://github.com/Fabrizio35/PF-Henry-GameZone',
+    image: HenryGameZomeImage,
+    techs:
+      'Javascript • React • CSS • HTML • Redux • Cloudinary • Express.js • PostgreSQL • Sequelize • Auth0 • SCRUM',
+    date: 'Marzo 2023 - Abril 2023',
+  },
+  {
+    id: 1,
+    title: 'Pokemon App',
+    description:
+      'Aplicación web interactiva que permite explorar, filtrar y crear Pokémon, combinando información de una API externa con una base de datos propia.',
+    source: 'https://github.com/Fabrizio35/pokemon-pi',
+    image: PokemonApp,
+    techs:
+      'Javascript • React • HTML • CSS • Redux • Express.js • PostgreSQL • Sequelize',
     date: 'Agosto 2023',
   },
 ]

@@ -1,6 +1,7 @@
 import AddFriendsImage from '@/assets/projects/add-friends-cap.webp'
 import FOShopImage from '@/assets/projects/fo-shop-cap.webp'
 import UserManagementImage from '@/assets/projects/user-management-cap.webp'
+import ConstructoraMexicanaValladolidImage from '@/assets/projects/constructora-mexicana-valladolid-cap.webp'
 import {
   BrandTypescript,
   BrandJavascript,
@@ -45,7 +46,17 @@ export const EXPERIENCIE = [
 
 export const PROJECTS = [
   {
-    id: 2,
+    id: 4,
+    title: 'Constructora Mexicana Valladolid',
+    description:
+      'Diseñé y desarrollé desde cero el sitio web de una constructora en México, con el objetivo de transmitir solidez, profesionalismo y facilitar la navegación por sus servicios.',
+    link: 'https://constructoramexicanavalladolid.com.mx/',
+    image: ConstructoraMexicanaValladolidImage,
+    techs: 'Typescript • React • Tailwind',
+    date: 'Mayo 2025',
+  },
+  {
+    id: 3,
     title: 'User Management - Sistema de gestión de usuarios',
     description:
       'Sistema de gestión de usuarios. Filtros por edad y género. Ordenación alfabética. Búsqueda por nombre. Detalle del usuario. Eliminación de la lista.',
@@ -56,7 +67,7 @@ export const PROJECTS = [
     date: 'Octubre 2023',
   },
   {
-    id: 3,
+    id: 2,
     title: 'FO Shop - Ecommerce',
     description:
       'Ecommerce de productos. Filtros por categoría y precio. Ordenación alfabética. Paginado. Búsqueda por nombre. Detalle del producto. Carrito de compra.',
@@ -67,7 +78,7 @@ export const PROJECTS = [
     date: 'Septiembre 2023',
   },
   {
-    id: 4,
+    id: 1,
     title: 'Add Friends - Sistema de gestión de amistades',
     description:
       'Sistema de gestión de solicitudes de amistades. Visualización de foto de perfil. Agregar y eliminar amigos/as. Detalle de la amistad. Editar nombre del amigo/a.',

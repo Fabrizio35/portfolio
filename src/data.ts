@@ -110,7 +110,7 @@ export const PROJECTS = [
     image: PokemonApp,
     techs:
       'Javascript • React • HTML • CSS • Redux • Express.js • PostgreSQL • Sequelize',
-    date: 'Agosto 2023',
+    date: 'Febrero 2023 - Marzo 2023',
   },
 ]
 

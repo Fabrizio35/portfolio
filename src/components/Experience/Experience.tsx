@@ -35,7 +35,7 @@ export default function Experience({ experience }: Props) {
       <div className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
         {experience?.description?.split('.').map((sentence, index) => {
           const trimmed = sentence.trim()
-          return trimmed ? <p className="my-1" key={index}>{trimmed}.</p> : null
+          return trimmed ? <p className="my-1" key={index}>• {trimmed}.</p> : null
         })}
       </div>
 

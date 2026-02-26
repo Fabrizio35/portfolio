@@ -1,10 +1,27 @@
-import { SpreaditIcon, DazlabsIcon } from '@/icons'
+import { SpreaditIcon, DazlabsIcon, StrongSystemsIcon } from '@/icons'
 
 export const EXPERIENCIE = [
   {
-    id: 2,
-    date: 'Agosto 2025 - Actualidad',
+    id: 3,
+    date: 'Noviembre 2025 - Actualidad',
     title: 'FullStack Developer',
+    company: 'Strong Systems',
+    description: `Desarrollo FullStack de una aplicación web utilizando Next.js, React, TypeScript y Tailwind CSS.
+      Diseño e implementación de APIs y lógica de negocio con arquitectura escalable y mantenible.
+      Modelado y gestión de base de datos relacional con Prisma ORM y PostgreSQL.
+      Implementación de autenticación, manejo de sesiones y control de accesos.
+      Desarrollo de funcionalidades tanto del lado del cliente como del servidor (SSR, rutas dinámicas y server actions).
+      Optimización de rendimiento y estructura del proyecto siguiendo buenas prácticas de código limpio y modularización.
+      Participación activa en decisiones técnicas y mejoras de arquitectura del producto.`,
+    techs: 'Typescript • Next.js • React • Node • Prisma • PostgreSQL',
+    link: 'https://www.linkedin.com/company/strong-systems-solutions/',
+    current: true,
+    icon: StrongSystemsIcon,
+  },
+  {
+    id: 2,
+    date: 'Agosto 2025 - Octubre 2025',
+    title: 'Frontend Developer',
     company: 'Spreadit Marketing',
     description: `Desarrollo, modificación y optimización de templates y funcionalidades de un CMS, incluyendo corrección de
 errores y bugs.
@@ -17,7 +34,7 @@ cumplimiento de deadlines y entregas mediante Notion.
 de decisiones y mejoras del producto.`,
     techs: 'Typescript • React • PHP • Laravel • MySQL • HTML • CSS',
     link: 'https://www.linkedin.com/company/spreaditmkt/',
-    current: true,
+    current: false,
     icon: SpreaditIcon,
   },
   {

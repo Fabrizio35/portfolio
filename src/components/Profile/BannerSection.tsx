@@ -1,11 +1,11 @@
 import { FileCVIcon } from '@/icons'
-import Banner from '@/assets/images/banner.png'
+import Banner from '@/assets/images/banner.jpg'
 import Photo from '@/assets/images/fabrizio.jpg'
 
 export default function BannerSection() {
   return (
     <div className="relative">
-      <img src={Banner} alt="banner" className="w-full h-full" />
+      <img src={Banner} alt="banner" className="w-full h-56 object-cover" />
 
       <div className="py-5 w-full flex justify-end">
         <a
